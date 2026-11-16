@@ -1,8 +1,11 @@
+
 package com.pluralsight;
 
 import java.math.BigDecimal;
 
+// Represents one vehicle in the dealership.
 public class Vehicle {
+
     private String vin;
     private int year;
     private String make;
@@ -12,7 +15,7 @@ public class Vehicle {
     private int odometer;
     private BigDecimal price;
 
-    // Constructor to create a vehicle with its information.
+    // Creates a vehicle with all its information.
     public Vehicle(String vin, int year, String make, String model,
                    String vehicleType, String color, int odometer,
                    BigDecimal price) {
@@ -26,7 +29,7 @@ public class Vehicle {
         this.odometer = odometer;
         this.price = price;
     }
-    // Returns the vehicle VIN.
+
     public String getVin() {
         return vin;
     }
@@ -35,7 +38,6 @@ public class Vehicle {
         this.vin = vin;
     }
 
-    // Returns the vehicle year.
     public int getYear() {
         return year;
     }
@@ -44,7 +46,6 @@ public class Vehicle {
         this.year = year;
     }
 
-    // Returns the vehicle make.
     public String getMake() {
         return make;
     }
@@ -53,7 +54,6 @@ public class Vehicle {
         this.make = make;
     }
 
-    // Returns the vehicle model.
     public String getModel() {
         return model;
     }
@@ -62,7 +62,6 @@ public class Vehicle {
         this.model = model;
     }
 
-    // Returns the vehicle type.
     public String getVehicleType() {
         return vehicleType;
     }
@@ -71,7 +70,6 @@ public class Vehicle {
         this.vehicleType = vehicleType;
     }
 
-    // Returns the vehicle color.
     public String getColor() {
         return color;
     }
@@ -80,7 +78,6 @@ public class Vehicle {
         this.color = color;
     }
 
-    // Returns the vehicle odometer reading.
     public int getOdometer() {
         return odometer;
     }
@@ -89,7 +86,6 @@ public class Vehicle {
         this.odometer = odometer;
     }
 
-    // Returns the vehicle price.
     public BigDecimal getPrice() {
         return price;
     }
@@ -98,4 +94,11 @@ public class Vehicle {
         this.price = price;
     }
 
+    // Displays the vehicle information.
+    @Override
+    public String toString() {
+        return vin + " | " + year + " | " + make + " | "
+                + model + " | " + vehicleType + " | "
+                + color + " | " + odometer + " | $" + price;
+    }
 }
